@@ -1,0 +1,3 @@
+/home/bbekasiak/Desktop/RADIO/CMakeFiles/myprogram.dir
+/home/bbekasiak/Desktop/RADIO/CMakeFiles/edit_cache.dir
+/home/bbekasiak/Desktop/RADIO/CMakeFiles/rebuild_cache.dir

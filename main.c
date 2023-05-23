@@ -5,17 +5,18 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <sys/queue.h>         
+#include <signal.h>
 
-unsigned char ucCPUsNmbr;
+
 pthread_mutex_t mutex;
 pthread_cond_t reader_cond, analyzer_cond, printer_cond;
 TAILQ_HEAD(tailhead, sCpuData) head;
-
-int dataReady = 0;
-int statsReady = 0;
+unsigned char ucCPUsNmbr;
 int count = 0;
 int calculated = 0;
-int analyzed_before = 0;
+volatile sig_atomic_t done = 0;
+
+void term(int signum);
 
 struct sCpuData {
     unsigned char ucCpuIndx;
@@ -24,7 +25,7 @@ struct sCpuData {
     int user, nice, system, idle, iowait, irq, softirq, steal, guest, guest_nice;
     int prev_user, prev_nice, prev_system, prev_idle, prev_iowait, prev_irq, prev_softirq, prev_steal, prev_guest, prev_guest_nice;
     TAILQ_ENTRY(sCpuData) nodes;
-    int calculated;
+    //int calculated;
 };
 
 void add_to_queue(struct sCpuData scd_arg);
@@ -36,12 +37,10 @@ void *reader(void *arg)
     FILE *fp;
     unsigned char ucCpuCounter = 0;
     int BUFFER_SIZE = ucCPUsNmbr + 1;
-    while(1){
-        //printf("reader wait\n");
+    while(!done){
         pthread_mutex_lock(&mutex);
         
         while (count == BUFFER_SIZE) {
-            //printf("count == BUFFER_SIZE [ %d ] reader \n", count);
             pthread_cond_wait(&reader_cond, &mutex);
         }
        
@@ -53,8 +52,20 @@ void *reader(void *arg)
 
             char cpun[6];
             int user, nice, system, idle, iowait, irq, softirq, steal, guest, guest_nice;
-            
-            
+            //printf("llala \n");
+
+            /*ucCpuCounter = 0;
+            do {
+                //printf("llala");
+                fscanf(fp,"%5s %d %d %d %d %d %d %d %d %d %d",
+                scd->cCPUname, &scd->user, &scd->nice, &scd->system, &scd->idle, &scd->iowait,
+                &scd->irq, &scd->softirq, &scd->steal, &scd->guest, &scd->guest_nice);
+                
+                calculated = 0;
+                add_to_queue(*scd);
+                ucCpuCounter++;
+                count++;
+            } while (!strstr(scd->cCPUname,"cpu"));*/
 
             while (fscanf(fp,"%5s %d %d %d %d %d %d %d %d %d %d",
             cpun, &user, &nice, &system, &idle, &iowait, &irq, &softirq, &steal, &guest, &guest_nice) != EOF)
@@ -76,13 +87,12 @@ void *reader(void *arg)
                 scd->steal = steal;
                 scd->guest = guest;
                 scd->guest_nice = guest_nice;
-                scd->calculated = 0;
+                //scd->calculated = 0;
                 calculated = 0;
 
                 add_to_queue(*scd);
                 ucCpuCounter++;
                 count++;
-                //printf("%5s %d %d %d %d %d %d %d %d %d %d \n", cpun, user, nice, system, idle, iowait, irq, softirq, steal, guest, guest_nice);
             }
             fclose(fp);
             
@@ -92,7 +102,7 @@ void *reader(void *arg)
         pthread_cond_signal(&analyzer_cond);
         pthread_mutex_unlock(&mutex);
         sleep(1);
-        //usleep(100000);
+
     }
 
 
@@ -101,33 +111,23 @@ void *reader(void *arg)
 
 void *analyzer(void *arg)
 {
-    struct sCpuData * scd; //(struct sCpuData*)arg;
-    //unsigned char ucCPUsNmbr = sysconf(_SC_NPROCESSORS_ONLN) + 1; // "+1" becouse i add first "cpu" data which is sumamry of all cpu's
+    struct sCpuData * scd;
     unsigned char ucCpuIx = 0;
-    struct sCpuData prev_scd[ucCPUsNmbr + 1];
-    float iPrevIdle, iPrevNonIdle, iPrevTotal;
-    float iIdle, iNonIdle, iTotal;
-    float iTotald, iIdled, iCPU_Percentage;
+    struct sCpuData prev_scd[ucCPUsNmbr + 1]; // "+1" becouse I also included "cpu" data which is sumamry of all cpu's
+    float iPrevIdle = 0, iPrevNonIdle = 0, iPrevTotal = 0;
+    float iIdle = 0, iNonIdle = 0, iTotal = 0;
+    float iTotald = 0, iIdled = 0, iCPU_Percentage = 0;
     int BUFFER_SIZE = ucCPUsNmbr + 1;
-    while(1)
+    while(!done)
     {
-        //printf("analyzer wait\n");
         pthread_mutex_lock(&mutex);
-        //printf(">in analyzer \n");
-        // Wait until data is ready
-
-        while (count != BUFFER_SIZE || calculated == 1) {
-            //printf("count !=  BUFFER_SIZE [ %d ] analyzer\n", count );
+        while (count != BUFFER_SIZE || calculated == 1) { // Wait until data is ready and until printer 
             pthread_cond_wait(&analyzer_cond, &mutex);
         }
         
-
-
         TAILQ_FOREACH(scd, &head, nodes)
         {
             ucCpuIx = scd->ucCpuIndx;
-            //printf("%5s usage: %f %% \n", scd->cCPUname, scd->fCpuUsage);
-
 
             iPrevIdle = prev_scd[ucCpuIx].idle + prev_scd[ucCpuIx].iowait;
             iIdle = scd->idle + scd->iowait;
@@ -138,21 +138,18 @@ void *analyzer(void *arg)
 
             iPrevTotal = iPrevIdle + iPrevNonIdle;
             iTotal = iIdle + iNonIdle;
-            //printf("iPrevTotal: %f ", iPrevTotal );
-            //printf("| iTotal: %f \n", iPrevTotal );
+
             //differentiate: actual value minus the previous one
             iTotald = iTotal - iPrevTotal;
             iIdled = iIdle - iPrevIdle;
             
             scd->fCpuUsage = ((iTotald - iIdled)/iTotald)*100;
             
-            scd->calculated = 1;
+            //scd->calculated = 1;
             calculated = 1;
             prev_scd[ucCpuIx] = *scd;
-
         }
 
-        
         
         pthread_cond_signal(&printer_cond);
         pthread_mutex_unlock(&mutex);
@@ -164,22 +161,20 @@ void *analyzer(void *arg)
 
 void *printer(void *arg)
 {
-    struct sCpuData * scd;// = (struct sCpuData*)arg;
-    while(1)
+    struct sCpuData * scd;
+    while(!done)
     {
         pthread_mutex_lock(&mutex);
-        while( calculated == 0){
+        while( calculated == 0){ // Wait until the analyzer thread finishes it's calculations
             pthread_cond_wait(&printer_cond, &mutex);
         }
         
         clrscr();
-        
 
         TAILQ_FOREACH(scd, &head, nodes)
         {
             printf("%5s usage: %.4f %% \n", scd->cCPUname, scd->fCpuUsage);
             //printf("%5s %d %d %d %d %d %d %d %d %d %d cpu usage: %.4f %% %d\n", scd->cCPUname, scd->user, scd->nice, scd->system, scd->idle, scd->iowait, scd->irq, scd->softirq, scd->steal, scd->guest, scd->guest_nice, scd->fCpuUsage, scd->calculated);
-
         }
         while (!TAILQ_EMPTY(&head))
         {
@@ -198,32 +193,40 @@ void *printer(void *arg)
     return NULL;
 }
 
+void *term_after3sec();
+
 int main(int argc, char* argv[]) {
-    ucCPUsNmbr = sysconf(_SC_NPROCESSORS_ONLN);
-    pthread_t thread_reader, thread_analyzer, thread_printer;
+    
+    pthread_t thread_reader, thread_analyzer, thread_printer, term3;
     struct sCpuData scd;
+    struct sigaction action;
+    int result; 
+
+    memset(&action, 0, sizeof(struct sigaction));
+    action.sa_handler = term;
+    sigaction(SIGTERM, &action, NULL);
+
+    ucCPUsNmbr = sysconf(_SC_NPROCESSORS_ONLN);
 
     TAILQ_INIT(&head);
-
-    
 
     pthread_cond_init(&reader_cond, NULL);
     pthread_cond_init(&analyzer_cond, NULL);
     pthread_cond_init(&printer_cond, NULL);
     
-    
-    int result = pthread_create(&thread_reader, NULL, reader, &scd);
+    result = pthread_create(&thread_reader, NULL, reader, &scd);
     if (result != 0) { perror("Could not create thread."); }
     result = pthread_create(&thread_analyzer, NULL, analyzer, &scd);
     if (result != 0) { perror("Could not create thread."); }
     result = pthread_create(&thread_printer, NULL, printer, &scd);
     if (result != 0) { perror("Could not create thread."); }
+    pthread_create(&term3, NULL, term_after3sec, NULL);
 
     pthread_join(thread_reader, NULL);
     pthread_join(thread_analyzer, NULL);
     pthread_join(thread_printer, NULL);
 
-    printf("Main thread exiting.\n");
+    printf("\n Exiting the program using SIGTERM.\n");
 
     pthread_mutex_destroy(&mutex);
     pthread_cond_destroy(&reader_cond);
@@ -249,4 +252,16 @@ void add_to_queue(struct sCpuData scd_arg) {
 void clrscr()
 {
     printf("\e[1;1H\e[2J");
+}
+
+void term(int signum)
+{
+    done = 1;
+}
+
+void *term_after3sec()
+{
+    sleep(2);
+    done = 1;
+    return NULL;
 }
