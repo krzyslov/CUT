@@ -16,6 +16,7 @@ How to launch test:
 How to launch valgrind test:
 >cd build
 >valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --verbose --log-file=../valgrind-out.txt ./MyExecutable
+* press ctrl+c *
 
 If it comes to Valgrind check, there's the summary:
 ==43850== HEAP SUMMARY:
