@@ -5,6 +5,10 @@
 Therefore it is impossible to miss a warning.
 Without that flag a warning is generated when compiling, but I might miss it. 
 
+How to launch program
+>cd build
+>./MyExecutable
+
 How to launch test:
 >cd build
 >make test
