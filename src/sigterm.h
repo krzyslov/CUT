@@ -7,8 +7,9 @@
 
 extern volatile sig_atomic_t end_signal;
 
-void term(int signum);
+void term();
 void * term_after3sec();
 void set_SIGTERM();
+void set_SIGINT();
 
 #endif

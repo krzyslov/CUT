@@ -3,15 +3,27 @@ cmake_minimum_required(VERSION 3.5)
 project(CUT_Project C) 
 set(CMAKE_C_STANDARD 11)
 
-# Set the path to the GCC compiler
-set(CMAKE_C_COMPILER gcc)
 
-set(MAIN_EXECUTABLE_SOURCES
+# Check if the CC environment variable is set and if not set the compiler to gcc
+if (DEFINED ENV{CC})
+    set(CMAKE_C_COMPILER $ENV{CC})
+    else()
+    set(CMAKE_C_COMPILER gcc)
+endif()
+
+
+# Add the source files
+set(SOURCE_FILES
+    src/queue.c
+    src/reader.c
+    src/analyzer.c
+    src/printer.c
+    src/sigterm.c
     src/main.c
 )
 
-# Add the main executable
-add_executable(MyExecutable ${MAIN_EXECUTABLE_SOURCES})
+# Add the executable
+add_executable(MyExecutable ${SOURCE_FILES})
 
 # Set compiler flags for clang
 if(CMAKE_C_COMPILER_ID MATCHES "Clang")
@@ -23,38 +35,17 @@ if(CMAKE_C_COMPILER_ID MATCHES "GNU")
     target_compile_options(MyExecutable PRIVATE -Wall -Wextra -Werror)
 endif()
 
-# Add the example source files
-set(SOURCES
-    src/queue.c
-    src/queue.h
-    src/reader.h
-    src/reader.c
-    src/analyzer.h
-    src/analyzer.c
-    src/printer.h
-    src/printer.c
-    src/sigterm.c
-    src/sigterm.h
-)
-
-# Add the example library
-add_library(QueueLib ${SOURCES})
-
-
-# Include the header files for the main executable
-target_link_libraries(MyExecutable QueueLib)
-
-# Set the source files for the test executable
-set(TEST_EXECUTABLE_SOURCES
-    tests/test_file1.c
+# Add the test sources
+set(TEST_SOURCES
+    tests/test_queue.c
     src/queue.c
 )
-
 # Add the test executable
-add_executable(TestExecutable ${TEST_EXECUTABLE_SOURCES})
+add_executable(MyTests ${TEST_SOURCES})
 
-
-# Include the header files for the test executable
-target_include_directories(TestExecutable PUBLIC src)
-
-
+# Add a custom target to run the tests
+add_custom_target(test
+    COMMAND MyTests
+    DEPENDS MyTests
+    WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
+)

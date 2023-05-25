@@ -1,6 +1,6 @@
 #include "reader.h"
 
-void *reader(void *arg) 
+void *reader() 
 {
     FILE *fp;
     struct sCpuData scd = {0};
@@ -17,6 +17,7 @@ void *reader(void *arg)
         fp= fopen("/proc/stat", "r");
         if(fp == NULL){
             printf("File cannot open \n");
+            exit(EXIT_FAILURE);
         }else{
 
             char cCPUname[6];
@@ -43,8 +44,6 @@ void *reader(void *arg)
                 
             }
             fclose(fp);
-            
-            
         }
         pthread_cond_signal(&analyzer_cond);
         pthread_mutex_unlock(&mutex);

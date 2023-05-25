@@ -15,6 +15,6 @@ extern unsigned char ucAnalyzeFinished;
 extern pthread_cond_t printer_cond, analyzer_cond;
 extern unsigned char ucCPUsNmbr;
 
-void *analyzer(void *arg);
+void *analyzer();
 
 #endif

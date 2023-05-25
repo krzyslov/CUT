@@ -1,1 +1,1 @@
-gcc CMakeFiles/MyExecutable.dir/src/main.c.o -o MyExecutable  libQueueLib.a 
+/usr/bin/cc CMakeFiles/MyExecutable.dir/src/queue.c.o CMakeFiles/MyExecutable.dir/src/reader.c.o CMakeFiles/MyExecutable.dir/src/analyzer.c.o CMakeFiles/MyExecutable.dir/src/printer.c.o CMakeFiles/MyExecutable.dir/src/sigterm.c.o CMakeFiles/MyExecutable.dir/src/main.c.o -o MyExecutable 

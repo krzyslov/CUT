@@ -13,10 +13,11 @@ pthread_cond_t reader_cond, analyzer_cond, printer_cond;
 
 int main() {
     
-    pthread_t thread_reader, thread_analyzer, thread_printer, term3;
+    pthread_t thread_reader, thread_analyzer, thread_printer;
     
     set_SIGTERM();
-
+    set_SIGINT();
+    
     ucCPUsNmbr = sysconf(_SC_NPROCESSORS_ONLN);
 
     TAILQ_INIT(&head);
@@ -28,13 +29,13 @@ int main() {
     pthread_create(&thread_reader, NULL, reader, NULL);
     pthread_create(&thread_analyzer, NULL, analyzer, NULL);
     pthread_create(&thread_printer, NULL, printer, NULL);
-    pthread_create(&term3, NULL, term_after3sec, NULL); // do testow
+    //pthread_create(&term3, NULL, term_after3sec, NULL); // do testow
 
     pthread_join(thread_reader, NULL);
     pthread_join(thread_analyzer, NULL);
     pthread_join(thread_printer, NULL);
 
-    printf("\n Exiting the program using SIGTERM.\n");
+    printf("\n Exiting the program.\n");
 
     pthread_mutex_destroy(&mutex);
     pthread_cond_destroy(&reader_cond);

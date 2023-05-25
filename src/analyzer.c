@@ -2,7 +2,7 @@
 
 unsigned char ucAnalyzeFinished;
 
-void *analyzer(void *arg)
+void *analyzer()
 {   
     struct sCpuData * scd;
     unsigned char ucCpuIx = 0;
@@ -17,7 +17,7 @@ void *analyzer(void *arg)
 
     int iPrevIdle = 0, iPrevNonIdle = 0, iPrevTotal = 0;
     int iIdle = 0, iNonIdle = 0, iTotal = 0;
-    float fTotald = 0, fIdled = 0, fCPU_Percentage = 0;
+    float fTotald = 0, fIdled = 0;
     int BUFFER_SIZE = ucCPUsNmbr + 1;
     while(!end_signal)
     {

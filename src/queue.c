@@ -1,8 +1,9 @@
 #include "queue.h"
 
-unsigned char ucItemsInQueue = 0;
+
 struct tailhead head;
 unsigned char ucCPUsNmbr = 0;
+unsigned char ucItemsInQueue = 0;
 
 void add_to_CPUqueue(struct sCpuData scd_arg) {
     struct sCpuData *scd;

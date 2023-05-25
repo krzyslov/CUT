@@ -69,32 +69,111 @@ include CMakeFiles/MyExecutable.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/MyExecutable.dir/flags.make
 
+CMakeFiles/MyExecutable.dir/src/queue.c.o: CMakeFiles/MyExecutable.dir/flags.make
+CMakeFiles/MyExecutable.dir/src/queue.c.o: ../src/queue.c
+CMakeFiles/MyExecutable.dir/src/queue.c.o: CMakeFiles/MyExecutable.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bbekasiak/Desktop/RADIO/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/MyExecutable.dir/src/queue.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/MyExecutable.dir/src/queue.c.o -MF CMakeFiles/MyExecutable.dir/src/queue.c.o.d -o CMakeFiles/MyExecutable.dir/src/queue.c.o -c /home/bbekasiak/Desktop/RADIO/src/queue.c
+
+CMakeFiles/MyExecutable.dir/src/queue.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/MyExecutable.dir/src/queue.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bbekasiak/Desktop/RADIO/src/queue.c > CMakeFiles/MyExecutable.dir/src/queue.c.i
+
+CMakeFiles/MyExecutable.dir/src/queue.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/MyExecutable.dir/src/queue.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bbekasiak/Desktop/RADIO/src/queue.c -o CMakeFiles/MyExecutable.dir/src/queue.c.s
+
+CMakeFiles/MyExecutable.dir/src/reader.c.o: CMakeFiles/MyExecutable.dir/flags.make
+CMakeFiles/MyExecutable.dir/src/reader.c.o: ../src/reader.c
+CMakeFiles/MyExecutable.dir/src/reader.c.o: CMakeFiles/MyExecutable.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bbekasiak/Desktop/RADIO/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/MyExecutable.dir/src/reader.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/MyExecutable.dir/src/reader.c.o -MF CMakeFiles/MyExecutable.dir/src/reader.c.o.d -o CMakeFiles/MyExecutable.dir/src/reader.c.o -c /home/bbekasiak/Desktop/RADIO/src/reader.c
+
+CMakeFiles/MyExecutable.dir/src/reader.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/MyExecutable.dir/src/reader.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bbekasiak/Desktop/RADIO/src/reader.c > CMakeFiles/MyExecutable.dir/src/reader.c.i
+
+CMakeFiles/MyExecutable.dir/src/reader.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/MyExecutable.dir/src/reader.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bbekasiak/Desktop/RADIO/src/reader.c -o CMakeFiles/MyExecutable.dir/src/reader.c.s
+
+CMakeFiles/MyExecutable.dir/src/analyzer.c.o: CMakeFiles/MyExecutable.dir/flags.make
+CMakeFiles/MyExecutable.dir/src/analyzer.c.o: ../src/analyzer.c
+CMakeFiles/MyExecutable.dir/src/analyzer.c.o: CMakeFiles/MyExecutable.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bbekasiak/Desktop/RADIO/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/MyExecutable.dir/src/analyzer.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/MyExecutable.dir/src/analyzer.c.o -MF CMakeFiles/MyExecutable.dir/src/analyzer.c.o.d -o CMakeFiles/MyExecutable.dir/src/analyzer.c.o -c /home/bbekasiak/Desktop/RADIO/src/analyzer.c
+
+CMakeFiles/MyExecutable.dir/src/analyzer.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/MyExecutable.dir/src/analyzer.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bbekasiak/Desktop/RADIO/src/analyzer.c > CMakeFiles/MyExecutable.dir/src/analyzer.c.i
+
+CMakeFiles/MyExecutable.dir/src/analyzer.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/MyExecutable.dir/src/analyzer.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bbekasiak/Desktop/RADIO/src/analyzer.c -o CMakeFiles/MyExecutable.dir/src/analyzer.c.s
+
+CMakeFiles/MyExecutable.dir/src/printer.c.o: CMakeFiles/MyExecutable.dir/flags.make
+CMakeFiles/MyExecutable.dir/src/printer.c.o: ../src/printer.c
+CMakeFiles/MyExecutable.dir/src/printer.c.o: CMakeFiles/MyExecutable.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bbekasiak/Desktop/RADIO/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/MyExecutable.dir/src/printer.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/MyExecutable.dir/src/printer.c.o -MF CMakeFiles/MyExecutable.dir/src/printer.c.o.d -o CMakeFiles/MyExecutable.dir/src/printer.c.o -c /home/bbekasiak/Desktop/RADIO/src/printer.c
+
+CMakeFiles/MyExecutable.dir/src/printer.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/MyExecutable.dir/src/printer.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bbekasiak/Desktop/RADIO/src/printer.c > CMakeFiles/MyExecutable.dir/src/printer.c.i
+
+CMakeFiles/MyExecutable.dir/src/printer.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/MyExecutable.dir/src/printer.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bbekasiak/Desktop/RADIO/src/printer.c -o CMakeFiles/MyExecutable.dir/src/printer.c.s
+
+CMakeFiles/MyExecutable.dir/src/sigterm.c.o: CMakeFiles/MyExecutable.dir/flags.make
+CMakeFiles/MyExecutable.dir/src/sigterm.c.o: ../src/sigterm.c
+CMakeFiles/MyExecutable.dir/src/sigterm.c.o: CMakeFiles/MyExecutable.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bbekasiak/Desktop/RADIO/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/MyExecutable.dir/src/sigterm.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/MyExecutable.dir/src/sigterm.c.o -MF CMakeFiles/MyExecutable.dir/src/sigterm.c.o.d -o CMakeFiles/MyExecutable.dir/src/sigterm.c.o -c /home/bbekasiak/Desktop/RADIO/src/sigterm.c
+
+CMakeFiles/MyExecutable.dir/src/sigterm.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/MyExecutable.dir/src/sigterm.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bbekasiak/Desktop/RADIO/src/sigterm.c > CMakeFiles/MyExecutable.dir/src/sigterm.c.i
+
+CMakeFiles/MyExecutable.dir/src/sigterm.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/MyExecutable.dir/src/sigterm.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bbekasiak/Desktop/RADIO/src/sigterm.c -o CMakeFiles/MyExecutable.dir/src/sigterm.c.s
+
 CMakeFiles/MyExecutable.dir/src/main.c.o: CMakeFiles/MyExecutable.dir/flags.make
 CMakeFiles/MyExecutable.dir/src/main.c.o: ../src/main.c
 CMakeFiles/MyExecutable.dir/src/main.c.o: CMakeFiles/MyExecutable.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bbekasiak/Desktop/RADIO/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/MyExecutable.dir/src/main.c.o"
-	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/MyExecutable.dir/src/main.c.o -MF CMakeFiles/MyExecutable.dir/src/main.c.o.d -o CMakeFiles/MyExecutable.dir/src/main.c.o -c /home/bbekasiak/Desktop/RADIO/src/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bbekasiak/Desktop/RADIO/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/MyExecutable.dir/src/main.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/MyExecutable.dir/src/main.c.o -MF CMakeFiles/MyExecutable.dir/src/main.c.o.d -o CMakeFiles/MyExecutable.dir/src/main.c.o -c /home/bbekasiak/Desktop/RADIO/src/main.c
 
 CMakeFiles/MyExecutable.dir/src/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/MyExecutable.dir/src/main.c.i"
-	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bbekasiak/Desktop/RADIO/src/main.c > CMakeFiles/MyExecutable.dir/src/main.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bbekasiak/Desktop/RADIO/src/main.c > CMakeFiles/MyExecutable.dir/src/main.c.i
 
 CMakeFiles/MyExecutable.dir/src/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/MyExecutable.dir/src/main.c.s"
-	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bbekasiak/Desktop/RADIO/src/main.c -o CMakeFiles/MyExecutable.dir/src/main.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bbekasiak/Desktop/RADIO/src/main.c -o CMakeFiles/MyExecutable.dir/src/main.c.s
 
 # Object files for target MyExecutable
 MyExecutable_OBJECTS = \
+"CMakeFiles/MyExecutable.dir/src/queue.c.o" \
+"CMakeFiles/MyExecutable.dir/src/reader.c.o" \
+"CMakeFiles/MyExecutable.dir/src/analyzer.c.o" \
+"CMakeFiles/MyExecutable.dir/src/printer.c.o" \
+"CMakeFiles/MyExecutable.dir/src/sigterm.c.o" \
 "CMakeFiles/MyExecutable.dir/src/main.c.o"
 
 # External object files for target MyExecutable
 MyExecutable_EXTERNAL_OBJECTS =
 
+MyExecutable: CMakeFiles/MyExecutable.dir/src/queue.c.o
+MyExecutable: CMakeFiles/MyExecutable.dir/src/reader.c.o
+MyExecutable: CMakeFiles/MyExecutable.dir/src/analyzer.c.o
+MyExecutable: CMakeFiles/MyExecutable.dir/src/printer.c.o
+MyExecutable: CMakeFiles/MyExecutable.dir/src/sigterm.c.o
 MyExecutable: CMakeFiles/MyExecutable.dir/src/main.c.o
 MyExecutable: CMakeFiles/MyExecutable.dir/build.make
-MyExecutable: libQueueLib.a
 MyExecutable: CMakeFiles/MyExecutable.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bbekasiak/Desktop/RADIO/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable MyExecutable"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bbekasiak/Desktop/RADIO/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable MyExecutable"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MyExecutable.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -15,6 +15,6 @@ extern unsigned char ucAnalyzeFinished;
 extern pthread_cond_t reader_cond, analyzer_cond;
 extern unsigned char ucCPUsNmbr;
 
-void *reader(void *arg);
+void *reader();
 
 #endif

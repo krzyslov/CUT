@@ -2,7 +2,7 @@
 
 volatile sig_atomic_t end_signal = 0;
 
-void term(int signum) 
+void term() 
 { 
     end_signal = 1; 
 }
@@ -21,3 +21,13 @@ void set_SIGTERM()
     action.sa_handler = term;
     sigaction(SIGTERM, &action, NULL);
 }
+
+void set_SIGINT()
+{
+    struct sigaction action;
+    memset(&action, 0, sizeof(struct sigaction));
+    action.sa_handler = term;
+    sigaction(SIGINT, &action, NULL);
+}
+
+

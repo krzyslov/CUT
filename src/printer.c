@@ -1,8 +1,7 @@
 #include "printer.h"
 
-void *printer(void *arg)
+void *printer()
 {
-    struct sCpuData * scd;
     while(!end_signal)
     {
         pthread_mutex_lock(&mutex);

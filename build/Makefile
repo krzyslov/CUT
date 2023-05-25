@@ -130,37 +130,37 @@ MyExecutable/fast:
 .PHONY : MyExecutable/fast
 
 #=============================================================================
-# Target rules for targets named QueueLib
+# Target rules for targets named MyTests
 
 # Build rule for target.
-QueueLib: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 QueueLib
-.PHONY : QueueLib
+MyTests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 MyTests
+.PHONY : MyTests
 
 # fast build rule for target.
-QueueLib/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QueueLib.dir/build.make CMakeFiles/QueueLib.dir/build
-.PHONY : QueueLib/fast
+MyTests/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyTests.dir/build.make CMakeFiles/MyTests.dir/build
+.PHONY : MyTests/fast
 
 #=============================================================================
-# Target rules for targets named TestExecutable
+# Target rules for targets named test
 
 # Build rule for target.
-TestExecutable: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TestExecutable
-.PHONY : TestExecutable
+test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test
+.PHONY : test
 
 # fast build rule for target.
-TestExecutable/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestExecutable.dir/build.make CMakeFiles/TestExecutable.dir/build
-.PHONY : TestExecutable/fast
+test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
+.PHONY : test/fast
 
 src/analyzer.o: src/analyzer.c.o
 .PHONY : src/analyzer.o
 
 # target to build an object file
 src/analyzer.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QueueLib.dir/build.make CMakeFiles/QueueLib.dir/src/analyzer.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyExecutable.dir/build.make CMakeFiles/MyExecutable.dir/src/analyzer.c.o
 .PHONY : src/analyzer.c.o
 
 src/analyzer.i: src/analyzer.c.i
@@ -168,7 +168,7 @@ src/analyzer.i: src/analyzer.c.i
 
 # target to preprocess a source file
 src/analyzer.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QueueLib.dir/build.make CMakeFiles/QueueLib.dir/src/analyzer.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyExecutable.dir/build.make CMakeFiles/MyExecutable.dir/src/analyzer.c.i
 .PHONY : src/analyzer.c.i
 
 src/analyzer.s: src/analyzer.c.s
@@ -176,7 +176,7 @@ src/analyzer.s: src/analyzer.c.s
 
 # target to generate assembly for a file
 src/analyzer.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QueueLib.dir/build.make CMakeFiles/QueueLib.dir/src/analyzer.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyExecutable.dir/build.make CMakeFiles/MyExecutable.dir/src/analyzer.c.s
 .PHONY : src/analyzer.c.s
 
 src/main.o: src/main.c.o
@@ -208,7 +208,7 @@ src/printer.o: src/printer.c.o
 
 # target to build an object file
 src/printer.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QueueLib.dir/build.make CMakeFiles/QueueLib.dir/src/printer.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyExecutable.dir/build.make CMakeFiles/MyExecutable.dir/src/printer.c.o
 .PHONY : src/printer.c.o
 
 src/printer.i: src/printer.c.i
@@ -216,7 +216,7 @@ src/printer.i: src/printer.c.i
 
 # target to preprocess a source file
 src/printer.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QueueLib.dir/build.make CMakeFiles/QueueLib.dir/src/printer.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyExecutable.dir/build.make CMakeFiles/MyExecutable.dir/src/printer.c.i
 .PHONY : src/printer.c.i
 
 src/printer.s: src/printer.c.s
@@ -224,7 +224,7 @@ src/printer.s: src/printer.c.s
 
 # target to generate assembly for a file
 src/printer.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QueueLib.dir/build.make CMakeFiles/QueueLib.dir/src/printer.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyExecutable.dir/build.make CMakeFiles/MyExecutable.dir/src/printer.c.s
 .PHONY : src/printer.c.s
 
 src/queue.o: src/queue.c.o
@@ -232,8 +232,8 @@ src/queue.o: src/queue.c.o
 
 # target to build an object file
 src/queue.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QueueLib.dir/build.make CMakeFiles/QueueLib.dir/src/queue.c.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestExecutable.dir/build.make CMakeFiles/TestExecutable.dir/src/queue.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyExecutable.dir/build.make CMakeFiles/MyExecutable.dir/src/queue.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyTests.dir/build.make CMakeFiles/MyTests.dir/src/queue.c.o
 .PHONY : src/queue.c.o
 
 src/queue.i: src/queue.c.i
@@ -241,8 +241,8 @@ src/queue.i: src/queue.c.i
 
 # target to preprocess a source file
 src/queue.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QueueLib.dir/build.make CMakeFiles/QueueLib.dir/src/queue.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestExecutable.dir/build.make CMakeFiles/TestExecutable.dir/src/queue.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyExecutable.dir/build.make CMakeFiles/MyExecutable.dir/src/queue.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyTests.dir/build.make CMakeFiles/MyTests.dir/src/queue.c.i
 .PHONY : src/queue.c.i
 
 src/queue.s: src/queue.c.s
@@ -250,8 +250,8 @@ src/queue.s: src/queue.c.s
 
 # target to generate assembly for a file
 src/queue.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QueueLib.dir/build.make CMakeFiles/QueueLib.dir/src/queue.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestExecutable.dir/build.make CMakeFiles/TestExecutable.dir/src/queue.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyExecutable.dir/build.make CMakeFiles/MyExecutable.dir/src/queue.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyTests.dir/build.make CMakeFiles/MyTests.dir/src/queue.c.s
 .PHONY : src/queue.c.s
 
 src/reader.o: src/reader.c.o
@@ -259,7 +259,7 @@ src/reader.o: src/reader.c.o
 
 # target to build an object file
 src/reader.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QueueLib.dir/build.make CMakeFiles/QueueLib.dir/src/reader.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyExecutable.dir/build.make CMakeFiles/MyExecutable.dir/src/reader.c.o
 .PHONY : src/reader.c.o
 
 src/reader.i: src/reader.c.i
@@ -267,7 +267,7 @@ src/reader.i: src/reader.c.i
 
 # target to preprocess a source file
 src/reader.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QueueLib.dir/build.make CMakeFiles/QueueLib.dir/src/reader.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyExecutable.dir/build.make CMakeFiles/MyExecutable.dir/src/reader.c.i
 .PHONY : src/reader.c.i
 
 src/reader.s: src/reader.c.s
@@ -275,7 +275,7 @@ src/reader.s: src/reader.c.s
 
 # target to generate assembly for a file
 src/reader.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QueueLib.dir/build.make CMakeFiles/QueueLib.dir/src/reader.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyExecutable.dir/build.make CMakeFiles/MyExecutable.dir/src/reader.c.s
 .PHONY : src/reader.c.s
 
 src/sigterm.o: src/sigterm.c.o
@@ -283,7 +283,7 @@ src/sigterm.o: src/sigterm.c.o
 
 # target to build an object file
 src/sigterm.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QueueLib.dir/build.make CMakeFiles/QueueLib.dir/src/sigterm.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyExecutable.dir/build.make CMakeFiles/MyExecutable.dir/src/sigterm.c.o
 .PHONY : src/sigterm.c.o
 
 src/sigterm.i: src/sigterm.c.i
@@ -291,7 +291,7 @@ src/sigterm.i: src/sigterm.c.i
 
 # target to preprocess a source file
 src/sigterm.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QueueLib.dir/build.make CMakeFiles/QueueLib.dir/src/sigterm.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyExecutable.dir/build.make CMakeFiles/MyExecutable.dir/src/sigterm.c.i
 .PHONY : src/sigterm.c.i
 
 src/sigterm.s: src/sigterm.c.s
@@ -299,32 +299,32 @@ src/sigterm.s: src/sigterm.c.s
 
 # target to generate assembly for a file
 src/sigterm.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/QueueLib.dir/build.make CMakeFiles/QueueLib.dir/src/sigterm.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyExecutable.dir/build.make CMakeFiles/MyExecutable.dir/src/sigterm.c.s
 .PHONY : src/sigterm.c.s
 
-tests/test_file1.o: tests/test_file1.c.o
-.PHONY : tests/test_file1.o
+tests/test_queue.o: tests/test_queue.c.o
+.PHONY : tests/test_queue.o
 
 # target to build an object file
-tests/test_file1.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestExecutable.dir/build.make CMakeFiles/TestExecutable.dir/tests/test_file1.c.o
-.PHONY : tests/test_file1.c.o
+tests/test_queue.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyTests.dir/build.make CMakeFiles/MyTests.dir/tests/test_queue.c.o
+.PHONY : tests/test_queue.c.o
 
-tests/test_file1.i: tests/test_file1.c.i
-.PHONY : tests/test_file1.i
+tests/test_queue.i: tests/test_queue.c.i
+.PHONY : tests/test_queue.i
 
 # target to preprocess a source file
-tests/test_file1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestExecutable.dir/build.make CMakeFiles/TestExecutable.dir/tests/test_file1.c.i
-.PHONY : tests/test_file1.c.i
+tests/test_queue.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyTests.dir/build.make CMakeFiles/MyTests.dir/tests/test_queue.c.i
+.PHONY : tests/test_queue.c.i
 
-tests/test_file1.s: tests/test_file1.c.s
-.PHONY : tests/test_file1.s
+tests/test_queue.s: tests/test_queue.c.s
+.PHONY : tests/test_queue.s
 
 # target to generate assembly for a file
-tests/test_file1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/TestExecutable.dir/build.make CMakeFiles/TestExecutable.dir/tests/test_file1.c.s
-.PHONY : tests/test_file1.c.s
+tests/test_queue.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyTests.dir/build.make CMakeFiles/MyTests.dir/tests/test_queue.c.s
+.PHONY : tests/test_queue.c.s
 
 # Help Target
 help:
@@ -334,9 +334,9 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... MyExecutable"
-	@echo "... QueueLib"
-	@echo "... TestExecutable"
+	@echo "... MyTests"
 	@echo "... src/analyzer.o"
 	@echo "... src/analyzer.i"
 	@echo "... src/analyzer.s"
@@ -355,9 +355,9 @@ help:
 	@echo "... src/sigterm.o"
 	@echo "... src/sigterm.i"
 	@echo "... src/sigterm.s"
-	@echo "... tests/test_file1.o"
-	@echo "... tests/test_file1.i"
-	@echo "... tests/test_file1.s"
+	@echo "... tests/test_queue.o"
+	@echo "... tests/test_queue.i"
+	@echo "... tests/test_queue.s"
 .PHONY : help
 
 
