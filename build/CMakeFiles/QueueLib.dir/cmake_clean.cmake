@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/QueueLib.dir/src/queue.c.o.d"
   "CMakeFiles/QueueLib.dir/src/reader.c.o"
   "CMakeFiles/QueueLib.dir/src/reader.c.o.d"
+  "CMakeFiles/QueueLib.dir/src/sigterm.c.o"
+  "CMakeFiles/QueueLib.dir/src/sigterm.c.o.d"
   "libQueueLib.a"
   "libQueueLib.pdb"
 )

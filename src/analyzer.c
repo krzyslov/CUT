@@ -1,7 +1,9 @@
 #include "analyzer.h"
 
+unsigned char ucAnalyzeFinished;
+
 void *analyzer(void *arg)
-{
+{   
     struct sCpuData * scd;
     unsigned char ucCpuIx = 0;
     struct sCpuData prev_scd[ucCPUsNmbr  + 1]; 
@@ -12,15 +14,15 @@ void *analyzer(void *arg)
             prev_scd[ucCPUctr] = scd_0;
         }
     }
-    
+
     int iPrevIdle = 0, iPrevNonIdle = 0, iPrevTotal = 0;
     int iIdle = 0, iNonIdle = 0, iTotal = 0;
     float fTotald = 0, fIdled = 0, fCPU_Percentage = 0;
     int BUFFER_SIZE = ucCPUsNmbr + 1;
-    while(!done)
+    while(!end_signal)
     {
         pthread_mutex_lock(&mutex);
-        while (ucItemsInQueue != BUFFER_SIZE || ucAnalyzeFinished == 1) { // Wait until data is ready and until printer 
+        while (ucItemsInQueue != BUFFER_SIZE || ucAnalyzeFinished == 1) { // Wait until reader thread finishes it's work
             pthread_cond_wait(&analyzer_cond, &mutex);
         }
         
@@ -38,7 +40,6 @@ void *analyzer(void *arg)
             iPrevTotal = iPrevIdle + iPrevNonIdle;
             iTotal = iIdle + iNonIdle;
 
-            //differentiate: actual value minus the previous one
             fTotald = iTotal - iPrevTotal;
             fIdled = iIdle - iPrevIdle;
             scd->fCpuUsage = ((fTotald - fIdled)/fTotald)*100;
@@ -51,6 +52,5 @@ void *analyzer(void *arg)
         pthread_mutex_unlock(&mutex);
         sleep(1);
     }
-
     pthread_exit(NULL);
 }

@@ -6,7 +6,7 @@
 #include <stdio.h>
 
 extern TAILQ_HEAD(tailhead, sCpuData) head;
-
+extern unsigned char ucItemsInQueue;
 //extern struct tailhead head;
 
 struct sCpuData {
@@ -18,8 +18,9 @@ struct sCpuData {
     TAILQ_ENTRY(sCpuData) nodes;
 };
 
-void add_to_queue(struct sCpuData scd_arg);
-
+void add_to_CPUqueue(struct sCpuData scd_arg);
+void empty_CPUqueue();
+void print_CPUqueue();
 
 
 #endif

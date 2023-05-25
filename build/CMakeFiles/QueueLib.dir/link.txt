@@ -1,2 +1,2 @@
-/usr/bin/ar qc libQueueLib.a CMakeFiles/QueueLib.dir/src/queue.c.o CMakeFiles/QueueLib.dir/src/reader.c.o CMakeFiles/QueueLib.dir/src/analyzer.c.o CMakeFiles/QueueLib.dir/src/printer.c.o
+/usr/bin/ar qc libQueueLib.a CMakeFiles/QueueLib.dir/src/queue.c.o CMakeFiles/QueueLib.dir/src/reader.c.o CMakeFiles/QueueLib.dir/src/analyzer.c.o CMakeFiles/QueueLib.dir/src/printer.c.o CMakeFiles/QueueLib.dir/src/sigterm.c.o
 /usr/bin/ranlib libQueueLib.a

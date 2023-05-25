@@ -73,64 +73,79 @@ CMakeFiles/QueueLib.dir/src/queue.c.o: CMakeFiles/QueueLib.dir/flags.make
 CMakeFiles/QueueLib.dir/src/queue.c.o: ../src/queue.c
 CMakeFiles/QueueLib.dir/src/queue.c.o: CMakeFiles/QueueLib.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bbekasiak/Desktop/RADIO/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/QueueLib.dir/src/queue.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/QueueLib.dir/src/queue.c.o -MF CMakeFiles/QueueLib.dir/src/queue.c.o.d -o CMakeFiles/QueueLib.dir/src/queue.c.o -c /home/bbekasiak/Desktop/RADIO/src/queue.c
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/QueueLib.dir/src/queue.c.o -MF CMakeFiles/QueueLib.dir/src/queue.c.o.d -o CMakeFiles/QueueLib.dir/src/queue.c.o -c /home/bbekasiak/Desktop/RADIO/src/queue.c
 
 CMakeFiles/QueueLib.dir/src/queue.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/QueueLib.dir/src/queue.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bbekasiak/Desktop/RADIO/src/queue.c > CMakeFiles/QueueLib.dir/src/queue.c.i
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bbekasiak/Desktop/RADIO/src/queue.c > CMakeFiles/QueueLib.dir/src/queue.c.i
 
 CMakeFiles/QueueLib.dir/src/queue.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/QueueLib.dir/src/queue.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bbekasiak/Desktop/RADIO/src/queue.c -o CMakeFiles/QueueLib.dir/src/queue.c.s
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bbekasiak/Desktop/RADIO/src/queue.c -o CMakeFiles/QueueLib.dir/src/queue.c.s
 
 CMakeFiles/QueueLib.dir/src/reader.c.o: CMakeFiles/QueueLib.dir/flags.make
 CMakeFiles/QueueLib.dir/src/reader.c.o: ../src/reader.c
 CMakeFiles/QueueLib.dir/src/reader.c.o: CMakeFiles/QueueLib.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bbekasiak/Desktop/RADIO/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/QueueLib.dir/src/reader.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/QueueLib.dir/src/reader.c.o -MF CMakeFiles/QueueLib.dir/src/reader.c.o.d -o CMakeFiles/QueueLib.dir/src/reader.c.o -c /home/bbekasiak/Desktop/RADIO/src/reader.c
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/QueueLib.dir/src/reader.c.o -MF CMakeFiles/QueueLib.dir/src/reader.c.o.d -o CMakeFiles/QueueLib.dir/src/reader.c.o -c /home/bbekasiak/Desktop/RADIO/src/reader.c
 
 CMakeFiles/QueueLib.dir/src/reader.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/QueueLib.dir/src/reader.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bbekasiak/Desktop/RADIO/src/reader.c > CMakeFiles/QueueLib.dir/src/reader.c.i
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bbekasiak/Desktop/RADIO/src/reader.c > CMakeFiles/QueueLib.dir/src/reader.c.i
 
 CMakeFiles/QueueLib.dir/src/reader.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/QueueLib.dir/src/reader.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bbekasiak/Desktop/RADIO/src/reader.c -o CMakeFiles/QueueLib.dir/src/reader.c.s
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bbekasiak/Desktop/RADIO/src/reader.c -o CMakeFiles/QueueLib.dir/src/reader.c.s
 
 CMakeFiles/QueueLib.dir/src/analyzer.c.o: CMakeFiles/QueueLib.dir/flags.make
 CMakeFiles/QueueLib.dir/src/analyzer.c.o: ../src/analyzer.c
 CMakeFiles/QueueLib.dir/src/analyzer.c.o: CMakeFiles/QueueLib.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bbekasiak/Desktop/RADIO/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/QueueLib.dir/src/analyzer.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/QueueLib.dir/src/analyzer.c.o -MF CMakeFiles/QueueLib.dir/src/analyzer.c.o.d -o CMakeFiles/QueueLib.dir/src/analyzer.c.o -c /home/bbekasiak/Desktop/RADIO/src/analyzer.c
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/QueueLib.dir/src/analyzer.c.o -MF CMakeFiles/QueueLib.dir/src/analyzer.c.o.d -o CMakeFiles/QueueLib.dir/src/analyzer.c.o -c /home/bbekasiak/Desktop/RADIO/src/analyzer.c
 
 CMakeFiles/QueueLib.dir/src/analyzer.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/QueueLib.dir/src/analyzer.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bbekasiak/Desktop/RADIO/src/analyzer.c > CMakeFiles/QueueLib.dir/src/analyzer.c.i
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bbekasiak/Desktop/RADIO/src/analyzer.c > CMakeFiles/QueueLib.dir/src/analyzer.c.i
 
 CMakeFiles/QueueLib.dir/src/analyzer.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/QueueLib.dir/src/analyzer.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bbekasiak/Desktop/RADIO/src/analyzer.c -o CMakeFiles/QueueLib.dir/src/analyzer.c.s
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bbekasiak/Desktop/RADIO/src/analyzer.c -o CMakeFiles/QueueLib.dir/src/analyzer.c.s
 
 CMakeFiles/QueueLib.dir/src/printer.c.o: CMakeFiles/QueueLib.dir/flags.make
 CMakeFiles/QueueLib.dir/src/printer.c.o: ../src/printer.c
 CMakeFiles/QueueLib.dir/src/printer.c.o: CMakeFiles/QueueLib.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bbekasiak/Desktop/RADIO/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/QueueLib.dir/src/printer.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/QueueLib.dir/src/printer.c.o -MF CMakeFiles/QueueLib.dir/src/printer.c.o.d -o CMakeFiles/QueueLib.dir/src/printer.c.o -c /home/bbekasiak/Desktop/RADIO/src/printer.c
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/QueueLib.dir/src/printer.c.o -MF CMakeFiles/QueueLib.dir/src/printer.c.o.d -o CMakeFiles/QueueLib.dir/src/printer.c.o -c /home/bbekasiak/Desktop/RADIO/src/printer.c
 
 CMakeFiles/QueueLib.dir/src/printer.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/QueueLib.dir/src/printer.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bbekasiak/Desktop/RADIO/src/printer.c > CMakeFiles/QueueLib.dir/src/printer.c.i
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bbekasiak/Desktop/RADIO/src/printer.c > CMakeFiles/QueueLib.dir/src/printer.c.i
 
 CMakeFiles/QueueLib.dir/src/printer.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/QueueLib.dir/src/printer.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bbekasiak/Desktop/RADIO/src/printer.c -o CMakeFiles/QueueLib.dir/src/printer.c.s
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bbekasiak/Desktop/RADIO/src/printer.c -o CMakeFiles/QueueLib.dir/src/printer.c.s
+
+CMakeFiles/QueueLib.dir/src/sigterm.c.o: CMakeFiles/QueueLib.dir/flags.make
+CMakeFiles/QueueLib.dir/src/sigterm.c.o: ../src/sigterm.c
+CMakeFiles/QueueLib.dir/src/sigterm.c.o: CMakeFiles/QueueLib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bbekasiak/Desktop/RADIO/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/QueueLib.dir/src/sigterm.c.o"
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/QueueLib.dir/src/sigterm.c.o -MF CMakeFiles/QueueLib.dir/src/sigterm.c.o.d -o CMakeFiles/QueueLib.dir/src/sigterm.c.o -c /home/bbekasiak/Desktop/RADIO/src/sigterm.c
+
+CMakeFiles/QueueLib.dir/src/sigterm.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/QueueLib.dir/src/sigterm.c.i"
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bbekasiak/Desktop/RADIO/src/sigterm.c > CMakeFiles/QueueLib.dir/src/sigterm.c.i
+
+CMakeFiles/QueueLib.dir/src/sigterm.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/QueueLib.dir/src/sigterm.c.s"
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bbekasiak/Desktop/RADIO/src/sigterm.c -o CMakeFiles/QueueLib.dir/src/sigterm.c.s
 
 # Object files for target QueueLib
 QueueLib_OBJECTS = \
 "CMakeFiles/QueueLib.dir/src/queue.c.o" \
 "CMakeFiles/QueueLib.dir/src/reader.c.o" \
 "CMakeFiles/QueueLib.dir/src/analyzer.c.o" \
-"CMakeFiles/QueueLib.dir/src/printer.c.o"
+"CMakeFiles/QueueLib.dir/src/printer.c.o" \
+"CMakeFiles/QueueLib.dir/src/sigterm.c.o"
 
 # External object files for target QueueLib
 QueueLib_EXTERNAL_OBJECTS =
@@ -139,9 +154,10 @@ libQueueLib.a: CMakeFiles/QueueLib.dir/src/queue.c.o
 libQueueLib.a: CMakeFiles/QueueLib.dir/src/reader.c.o
 libQueueLib.a: CMakeFiles/QueueLib.dir/src/analyzer.c.o
 libQueueLib.a: CMakeFiles/QueueLib.dir/src/printer.c.o
+libQueueLib.a: CMakeFiles/QueueLib.dir/src/sigterm.c.o
 libQueueLib.a: CMakeFiles/QueueLib.dir/build.make
 libQueueLib.a: CMakeFiles/QueueLib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bbekasiak/Desktop/RADIO/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C static library libQueueLib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bbekasiak/Desktop/RADIO/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C static library libQueueLib.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/QueueLib.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/QueueLib.dir/link.txt --verbose=$(VERBOSE)
 

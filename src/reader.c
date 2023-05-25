@@ -1,15 +1,13 @@
 #include "reader.h"
 
-
-
 void *reader(void *arg) 
 {
-    struct sCpuData scd;
-    unsigned char ucCpuCounter = 0;
     FILE *fp;
-    //struct tailhead * head = (struct tailhead *) arg;
+    struct sCpuData scd = {0};
+    unsigned char ucCpuCounter = 0;
     int BUFFER_SIZE = ucCPUsNmbr + 1;
-    while(!done){
+
+    while(!end_signal){
 
         pthread_mutex_lock(&mutex);
         while (ucItemsInQueue == BUFFER_SIZE) {
@@ -40,22 +38,17 @@ void *reader(void *arg)
                 scd.steal = steal; scd.guest = guest;
                 scd.guest_nice = guest_nice;
                 ucAnalyzeFinished = 0;
-
-                add_to_queue(scd);
                 ucCpuCounter++;
-                ucItemsInQueue++;
+                add_to_CPUqueue(scd);
+                
             }
             fclose(fp);
             
             
         }
-        // Signal analyzer thread that data is ready
         pthread_cond_signal(&analyzer_cond);
         pthread_mutex_unlock(&mutex);
         sleep(1);
-
     }
-
-
     pthread_exit(NULL);
 }

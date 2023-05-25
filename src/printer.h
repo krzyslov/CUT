@@ -8,11 +8,12 @@
 #include <signal.h>
 
 extern unsigned char ucCPUsNmbr;
-extern volatile sig_atomic_t done;
+extern volatile sig_atomic_t end_signal;
 extern pthread_mutex_t mutex;
 extern unsigned char ucItemsInQueue;
 extern unsigned char ucAnalyzeFinished;
 extern pthread_cond_t printer_cond, reader_cond;
+extern unsigned char ucCPUsNmbr;
 
 void *printer(void *arg);
 

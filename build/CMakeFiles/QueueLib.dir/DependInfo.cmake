@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/bbekasiak/Desktop/RADIO/src/printer.c" "CMakeFiles/QueueLib.dir/src/printer.c.o" "gcc" "CMakeFiles/QueueLib.dir/src/printer.c.o.d"
   "/home/bbekasiak/Desktop/RADIO/src/queue.c" "CMakeFiles/QueueLib.dir/src/queue.c.o" "gcc" "CMakeFiles/QueueLib.dir/src/queue.c.o.d"
   "/home/bbekasiak/Desktop/RADIO/src/reader.c" "CMakeFiles/QueueLib.dir/src/reader.c.o" "gcc" "CMakeFiles/QueueLib.dir/src/reader.c.o.d"
+  "/home/bbekasiak/Desktop/RADIO/src/sigterm.c" "CMakeFiles/QueueLib.dir/src/sigterm.c.o" "gcc" "CMakeFiles/QueueLib.dir/src/sigterm.c.o.d"
   )
 
 # Targets to which this target links.

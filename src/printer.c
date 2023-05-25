@@ -3,33 +3,17 @@
 void *printer(void *arg)
 {
     struct sCpuData * scd;
-
-    while(!done)
+    while(!end_signal)
     {
         pthread_mutex_lock(&mutex);
-        while( ucAnalyzeFinished == 0){
+        while( ucAnalyzeFinished == 0){ // Data won't be printed unless analyzer thread finishes it's work
             pthread_cond_wait(&printer_cond, &mutex);
         }
-        
-        clrscr();
-
-        TAILQ_FOREACH(scd, &head, nodes)
-        {
-            printf("%5s usage: %.4f %% \n", scd->cCPUname, scd->fCpuUsage);
-        }
-        while (!TAILQ_EMPTY(&head))
-        {
-            scd = TAILQ_FIRST(&head);
-            TAILQ_REMOVE(&head, scd, nodes);
-            free(scd);
-            scd = NULL;
-        }
-        ucItemsInQueue = 0;
-        
+        print_CPUqueue();
+        empty_CPUqueue();
         pthread_mutex_unlock(&mutex);
         pthread_cond_signal(&reader_cond);
         sleep(1);
     }
-
-    return NULL;
+    pthread_exit(NULL);
 }

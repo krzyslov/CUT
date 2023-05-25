@@ -73,29 +73,29 @@ CMakeFiles/TestExecutable.dir/tests/test_file1.c.o: CMakeFiles/TestExecutable.di
 CMakeFiles/TestExecutable.dir/tests/test_file1.c.o: ../tests/test_file1.c
 CMakeFiles/TestExecutable.dir/tests/test_file1.c.o: CMakeFiles/TestExecutable.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bbekasiak/Desktop/RADIO/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/TestExecutable.dir/tests/test_file1.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TestExecutable.dir/tests/test_file1.c.o -MF CMakeFiles/TestExecutable.dir/tests/test_file1.c.o.d -o CMakeFiles/TestExecutable.dir/tests/test_file1.c.o -c /home/bbekasiak/Desktop/RADIO/tests/test_file1.c
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TestExecutable.dir/tests/test_file1.c.o -MF CMakeFiles/TestExecutable.dir/tests/test_file1.c.o.d -o CMakeFiles/TestExecutable.dir/tests/test_file1.c.o -c /home/bbekasiak/Desktop/RADIO/tests/test_file1.c
 
 CMakeFiles/TestExecutable.dir/tests/test_file1.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TestExecutable.dir/tests/test_file1.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bbekasiak/Desktop/RADIO/tests/test_file1.c > CMakeFiles/TestExecutable.dir/tests/test_file1.c.i
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bbekasiak/Desktop/RADIO/tests/test_file1.c > CMakeFiles/TestExecutable.dir/tests/test_file1.c.i
 
 CMakeFiles/TestExecutable.dir/tests/test_file1.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TestExecutable.dir/tests/test_file1.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bbekasiak/Desktop/RADIO/tests/test_file1.c -o CMakeFiles/TestExecutable.dir/tests/test_file1.c.s
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bbekasiak/Desktop/RADIO/tests/test_file1.c -o CMakeFiles/TestExecutable.dir/tests/test_file1.c.s
 
 CMakeFiles/TestExecutable.dir/src/queue.c.o: CMakeFiles/TestExecutable.dir/flags.make
 CMakeFiles/TestExecutable.dir/src/queue.c.o: ../src/queue.c
 CMakeFiles/TestExecutable.dir/src/queue.c.o: CMakeFiles/TestExecutable.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bbekasiak/Desktop/RADIO/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/TestExecutable.dir/src/queue.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TestExecutable.dir/src/queue.c.o -MF CMakeFiles/TestExecutable.dir/src/queue.c.o.d -o CMakeFiles/TestExecutable.dir/src/queue.c.o -c /home/bbekasiak/Desktop/RADIO/src/queue.c
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/TestExecutable.dir/src/queue.c.o -MF CMakeFiles/TestExecutable.dir/src/queue.c.o.d -o CMakeFiles/TestExecutable.dir/src/queue.c.o -c /home/bbekasiak/Desktop/RADIO/src/queue.c
 
 CMakeFiles/TestExecutable.dir/src/queue.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TestExecutable.dir/src/queue.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bbekasiak/Desktop/RADIO/src/queue.c > CMakeFiles/TestExecutable.dir/src/queue.c.i
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/bbekasiak/Desktop/RADIO/src/queue.c > CMakeFiles/TestExecutable.dir/src/queue.c.i
 
 CMakeFiles/TestExecutable.dir/src/queue.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TestExecutable.dir/src/queue.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bbekasiak/Desktop/RADIO/src/queue.c -o CMakeFiles/TestExecutable.dir/src/queue.c.s
+	gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/bbekasiak/Desktop/RADIO/src/queue.c -o CMakeFiles/TestExecutable.dir/src/queue.c.s
 
 # Object files for target TestExecutable
 TestExecutable_OBJECTS = \

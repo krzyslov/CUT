@@ -278,6 +278,30 @@ src/reader.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/QueueLib.dir/build.make CMakeFiles/QueueLib.dir/src/reader.c.s
 .PHONY : src/reader.c.s
 
+src/sigterm.o: src/sigterm.c.o
+.PHONY : src/sigterm.o
+
+# target to build an object file
+src/sigterm.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QueueLib.dir/build.make CMakeFiles/QueueLib.dir/src/sigterm.c.o
+.PHONY : src/sigterm.c.o
+
+src/sigterm.i: src/sigterm.c.i
+.PHONY : src/sigterm.i
+
+# target to preprocess a source file
+src/sigterm.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QueueLib.dir/build.make CMakeFiles/QueueLib.dir/src/sigterm.c.i
+.PHONY : src/sigterm.c.i
+
+src/sigterm.s: src/sigterm.c.s
+.PHONY : src/sigterm.s
+
+# target to generate assembly for a file
+src/sigterm.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/QueueLib.dir/build.make CMakeFiles/QueueLib.dir/src/sigterm.c.s
+.PHONY : src/sigterm.c.s
+
 tests/test_file1.o: tests/test_file1.c.o
 .PHONY : tests/test_file1.o
 
@@ -328,6 +352,9 @@ help:
 	@echo "... src/reader.o"
 	@echo "... src/reader.i"
 	@echo "... src/reader.s"
+	@echo "... src/sigterm.o"
+	@echo "... src/sigterm.i"
+	@echo "... src/sigterm.s"
 	@echo "... tests/test_file1.o"
 	@echo "... tests/test_file1.i"
 	@echo "... tests/test_file1.s"
