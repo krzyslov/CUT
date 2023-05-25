@@ -1,0 +1,5 @@
+/home/bbekasiak/Desktop/RADIO/build/CMakeFiles/MyExecutable.dir
+/home/bbekasiak/Desktop/RADIO/build/CMakeFiles/QueueLib.dir
+/home/bbekasiak/Desktop/RADIO/build/CMakeFiles/TestExecutable.dir
+/home/bbekasiak/Desktop/RADIO/build/CMakeFiles/edit_cache.dir
+/home/bbekasiak/Desktop/RADIO/build/CMakeFiles/rebuild_cache.dir
