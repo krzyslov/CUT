@@ -1,1 +1,0 @@
-/usr/bin/cc CMakeFiles/MyTests.dir/tests/test_queue.c.o CMakeFiles/MyTests.dir/src/queue.c.o -o MyTests 
